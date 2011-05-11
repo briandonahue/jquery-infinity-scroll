@@ -1,0 +1,32 @@
+h1. jQuery Infinity Scroll
+
+Yet another infinite scroll plugin... 
+
+h3. Goals
+
+* Deal in JSON, don't ask ajax requests to return HTML
+* Be templating/rendering agnostic - plug in your own function to handle returned data
+* Allow for flexible callbacks, with or without custom params
+* Follow jQuery plugins as close as possible (and as best I understand them!)
+
+h3. Caveats
+* Currently the plugin assumes you are scrolling the document, it doesn't handle DOM element scrolling, though it should
+be trivial to add.
+
+h3. Usage
+
+```javascript
+$('tbody.someTableBody').infinitescroll(
+            {
+              url: http://somewhere.com/list,
+              triggerAt: 50, // pixels from bottom of rendered list
+              resultsPerPage: 50,
+              appendTo: $('tbody.someTableBody'), // could technically append to different DOM object, not sure this is
+necessary
+              params: { userId: 5, otherInfo: 'test' },
+              renderData: function(data, element){ /* do stuff to render JSON to your element */ },
+              error: function () { /* handle ajax error */ },
+              loadOnInit: false // opt out of auto-loading so we can control when it first loads, by calling $element.infinitescroll('reset')
+            });
+
+```
