@@ -19,7 +19,7 @@ h3. Usage
 
 bc.  $('tbody.someTableBody').infinityscroll(
     {
-      url: http://somewhere.com/list,
+      url: "http://somewhere.com/list",
       triggerAt: 50, // pixels from bottom of rendered list
       resultsPerPage: 50,
       appendTo: $('tbody.someTableBody'), // could technically append to different DOM object, not sure this is
