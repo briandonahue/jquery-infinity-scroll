@@ -1,6 +1,6 @@
 h1. jQuery Infinity Scroll
 
-Yet another infinite scroll plugin... Initially inspired by [https://github.com/brianmario/jquery-infinite-scroll]
+Yet another infinite scroll plugin... Initially inspired by "https://github.com/brianmario/jquery-infinite-scroll":https://github.com/brianmario/jquery-infinite-scroll
 
 h3. Goals
 
