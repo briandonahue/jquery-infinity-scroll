@@ -15,18 +15,19 @@ be trivial to add.
 
 h3. Usage
 
+
 ```javascript
-$('tbody.someTableBody').infinitescroll(
-            {
-              url: http://somewhere.com/list,
-              triggerAt: 50, // pixels from bottom of rendered list
-              resultsPerPage: 50,
-              appendTo: $('tbody.someTableBody'), // could technically append to different DOM object, not sure this is
-necessary
-              params: { userId: 5, otherInfo: 'test' },
-              renderData: function(data, element){ /* do stuff to render JSON to your element */ },
-              error: function () { /* handle ajax error */ },
-              loadOnInit: false // opt out of auto-loading so we can control when it first loads, by calling $element.infinitescroll('reset')
-            });
+  $('tbody.someTableBody').infinitescroll(
+              {
+                url: http://somewhere.com/list,
+                triggerAt: 50, // pixels from bottom of rendered list
+                resultsPerPage: 50,
+                appendTo: $('tbody.someTableBody'), // could technically append to different DOM object, not sure this is
+  necessary
+                params: { userId: 5, otherInfo: 'test' },
+                renderData: function(data, element){ /* do stuff to render JSON to your element */ },
+                error: function () { /* handle ajax error */ },
+                loadOnInit: false // opt out of auto-loading so we can control when it first loads, by calling $element.infinitescroll('reset')
+              });
 
 ```
