@@ -16,7 +16,7 @@ be trivial to add.
 h3. Usage
 
 
-  $('tbody.someTableBody').infinitescroll(
+bc.  $('tbody.someTableBody').infinitescroll(
     {
       url: http://somewhere.com/list,
       triggerAt: 50, // pixels from bottom of rendered list
