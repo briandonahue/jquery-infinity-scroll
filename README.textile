@@ -10,8 +10,8 @@ h3. Goals
 * Follow jQuery plugins as close as possible (and as best I understand them!)
 
 h3. Caveats
-* Currently the plugin assumes you are scrolling the document, it doesn't handle DOM element scrolling, though it should
-be trivial to add.
+* Currently the plugin assumes you are scrolling the document, it doesn't handle DOM element scrolling, though it should be trivial to add.
+* I'm sure there is more that can be done to clean up and conventionalize. It's my first plugin, pulled from my own project.
 
 h3. Usage
 
