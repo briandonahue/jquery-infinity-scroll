@@ -13,10 +13,10 @@
         var settings = data.settings;
         $(document).scroll(function(e) { 
           if(!settings.disabled && hasReachedScrollTrigger(settings))
-            $this.infinitescroll('scroll'); 
+            $this.infinityscroll('scroll'); 
         } );
         if(settings.loadOnInit)
-          $this.infinitescroll('reset'); 
+          $this.infinityscroll('reset'); 
       });
     }, 
     scroll: function(options){
@@ -36,28 +36,28 @@
       data.maxReached = false;
       $.extend(data.settings, options);
       setData(data);
-      $(this).infinitescroll('scroll');
+      $(this).infinityscroll('scroll');
     },
     disable: function (){
       if(getData(this))
-        $(this).data('infinitescroll').settings.disabled = true;
+        $(this).data('infinityscroll').settings.disabled = true;
     },
     enable: function (){
       if(getData(this))
-        $(this).data('infinitescroll').settings.disabled = false;
+        $(this).data('infinityscroll').settings.disabled = false;
     },
     toggleDisabled: function (){
       if(getData(this))
-        $(this).data('infinitescroll').settings.disabled = !$(this).data('infinitescroll').settings.disabled;
+        $(this).data('infinityscroll').settings.disabled = !$(this).data('infinityscroll').settings.disabled;
     }
   };
 
   function getData(el){
-    return $(el).data('infinitescroll');
+    return $(el).data('infinityscroll');
   }
 
   function setData(data){
-    $(data.settings.appendTo).data('infinitescroll', data);
+    $(data.settings.appendTo).data('infinityscroll', data);
   }
 
   function getDefaultSettings(){
@@ -117,12 +117,12 @@
             if((data) && (data !== '')) {
               settings.renderData(data, settings.appendTo);
               settings.page++;
-              $(settings.appendTo).trigger('infinitescroll.finish');
+              $(settings.appendTo).trigger('infinityscroll.finish');
             }
             else {
               scrollData.maxReached = true;
               setData(scrollData);
-              $(settings.appendTo).trigger('infinitescroll.maxreached');
+              $(settings.appendTo).trigger('infinityscroll.maxreached');
             }
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
@@ -133,7 +133,7 @@
 
   }
 
-  $.fn.infinitescroll = function(method) {
+  $.fn.infinityscroll = function(method) {
     
     // Method calling logic
     if ( methods[method] ) {
@@ -141,7 +141,7 @@
     } else if ( typeof method === 'object' || ! method ) {
       return methods.init.apply( this, arguments );
     } else {
-      $.error( 'Method ' +  method + ' does not exist on jQuery.infinitescroll' );
+      $.error( 'Method ' +  method + ' does not exist on jQuery.infinityscroll' );
     }    
   
   };

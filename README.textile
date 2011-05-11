@@ -1,6 +1,6 @@
 h1. jQuery Infinity Scroll
 
-Yet another infinite scroll plugin... 
+Yet another infinite scroll plugin... Initially inspired by https://github.com/brianmario/jquery-infinite-scroll 
 
 h3. Goals
 
@@ -17,7 +17,7 @@ h3. Caveats
 h3. Usage
 
 
-bc.  $('tbody.someTableBody').infinitescroll(
+bc.  $('tbody.someTableBody').infinityscroll(
     {
       url: http://somewhere.com/list,
       triggerAt: 50, // pixels from bottom of rendered list
@@ -27,6 +27,6 @@ necessary
       params: { userId: 5, otherInfo: 'test' },
       renderData: function(data, element){ /* do stuff to render JSON to your element */ },
       error: function () { /* handle ajax error */ },
-      loadOnInit: false // opt out of auto-loading so we can control when it first loads, by calling $element.infinitescroll('reset')
+      loadOnInit: false // opt out of auto-loading so we can control when it first loads, by calling $element.infinityscroll('reset')
     });
 
